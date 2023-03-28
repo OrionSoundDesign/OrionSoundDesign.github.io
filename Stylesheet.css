@@ -1,0 +1,117 @@
+body {
+    background: #111726;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+    a:link {
+        color: #000000;
+    }
+    a:visited {
+    text-decoration: none;
+    }
+    a:hover {
+    background-color: #afafaf;
+    text-decoration: none;
+    }
+    a:active {
+    color: #000000;
+    background-color: #888888;
+    text-decoration: none;
+    }
+
+header{
+    background: #000000;
+    margin: 0;
+}
+
+    .sticky {
+        position: sticky;
+        top: 0;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }	
+    .LinkClickable {
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        padding: 2em;
+        margin: -2em;
+    }
+        li.HeaderLinks {
+            background: #ffffff;
+            color: #ef5455;			
+            display: inline-flex;
+            justify-content: space-around;
+            justify-content: space-between;
+            margin: 0px 1px;
+            padding: 20px 2%;
+        }
+        li.HeaderLinks:first-child {
+            margin-left: 60%;
+        }
+
+    h1 {
+        color: #2b3252; 
+        
+    }
+    h2 {
+        background: #000000;
+        color: #fad643; 
+    }
+    h3 {
+        color: #ef5455; 
+    }
+        button {
+        border-radius: 5px;
+        }
+    p {
+        font-size: 72px;
+        margin: 100;
+        padding: 100;
+    }
+    footer{
+        display: block;
+        background: #2b3252;
+        margin-top: 50px ;
+        color: #000000;
+        padding: 150px;
+        text-align: center;
+        overflow: hidden
+    }
+        ul.footer {
+            flex-wrap: nowrap;
+
+        }
+        li.FooterLink{
+            background-color: #ffffff;
+            display: inline-block;
+            margin: 0px 5%;
+            padding: 50px 25px;
+            position: relative; bottom: 100px;
+            white-space: nowrap;
+            width: 50px;
+        }
+            .TwitterLogoFoot{
+                Background-image: url("Images/Social Icons/Twitter.svg");
+                Background-size: 50px;
+                background-repeat: no-repeat;
+            }
+            .InstagramLogoFoot{
+                
+            }
+            .LinkedInLogoFoot{
+                
+            }
+            .YoutubeLogoFoot{
+                
+            }
