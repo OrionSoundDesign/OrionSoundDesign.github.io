@@ -20,7 +20,7 @@ a {
     a:hover {
         background-color: #2b3252;
         text-decoration: none;
-
+        transition-delay: 50ms;
     }
     a:active {
         color: #000000;
@@ -29,9 +29,9 @@ a {
     }
 
 header{
-    background-color: rgba(17, 23, 38, 0.2); /*old HEXcolor code #111726, using RBGA so opacity isn't inhereted by children; */
-    margin: 0;
-    padding: 10px;
+    background-color: rgba(17, 23, 38, 0.0); /*old HEXcolor code #111726, using RBGA so opacity isn't inhereted by children; */
+    margin: 0px;
+    padding: 0px;
     transition: 500ms;
 }
 
@@ -47,64 +47,130 @@ header{
         z-index: 6;
     }
 
-ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-    .HeaderUl{
-        opacity: 0.7;
-        transition: 500ms;  
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
     }
-    .HeaderUl:hover{
-        opacity: 1;
-        transition: 500ms;
+        .HeaderUl{
+            text-align: right;
+            list-style-position: inside;
+            opacity: 0.7;
+            transition: 500ms;  
         }
+            .HeaderUl:hover{
+                opacity: 1;
+                transition: 500ms;
+                }
 
-.LinkClickable {
-    display: inline-block;
-    position: relative;
-    padding: 2em;
-    margin: -2em;
+        .LinkClickable {
+            display: inline-block;
+            position: relative;
+            padding: 2em;
+            margin: -2em;
+        }
+        li.HeaderLinks {
+            /* background: #111726; */ /*commenting out to make opacity easier*/
+            display: inline-flex;
+            justify-content: space-around;
+            justify-content: space-between;
+            margin: 0px;
+            padding: 30px 2%;
+            overflow: hidden;
+        }
+            /* li.HeaderLinks:first-child {
+                margin-left: 60%;
+            } */
+
+
+
+
+/* #ee5454 redish color I want to save for later*/
+
+section.ImgShowcase {
+    background-color: #000000;
+    position:relative;
+    padding: 250px;
+    margin: -50px auto; 
+    bottom: 50px;
 }
-    li.HeaderLinks {
-        /* background: #111726; */ /*commenting out to make opacity easier*/
-        display: inline-flex;
-        justify-content: space-around;
-        justify-content: space-between;
-        margin: 0px 1px;
-        padding: 20px 2%;
-        overflow: hidden;
+    section.ImgShowcase::before {
+        content: "";
+        position: absolute;
+        background-image: url("Images/Reaper.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.5;
     }
-        li.HeaderLinks:first-child {
-            margin-left: 60%;
+        .ImgText {
+            font-size: xx-large;
+            font-family:  sans-serif;
+            position: relative;
+            color: #ffffff;
+            padding: 0px;
+            margin: 0px;
+            text-overflow: ellipsis;
+            text-shadow:0px 0px 5px #575757;
         }
+            h1.ImgText{
+                font-size: 72px;
+                text-transform: uppercase;
+                overflow: hidden;
+                bottom: 50px;
+            }
+            
+                div.ImgText{
+                    font-size: 42px;
+                    padding: 50px 0px 0px 0px;
+                }
 
-h1 {
-    color: #ffffff; 
-    margin: 250px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
+            h2.ImgText{
+                padding: 0px 0px 50px 0px;
+            }
+            
+            h3.ImgText{
+                font-size: x-large;
+            }
 
-    section.PortfolioVideos {
+section.PortfolioVideos {
         background: #111726;
-        color: #fad643; 
         padding: 50px;
-        width: auto;
-        height: 100%;
+        /* width: 100%;
+        height: 100%; */
 }
     .VideoWrapper {
-        float: none;
+        display: flex; 
+        /* float: none; */
         clear: both;
         width: 100%;
-        position: relative;
-        padding-bottom: 45%;
-        padding-top: 25px;
+        height: 500px;
+        margin: 0px auto;
+
+        /* position: relative; */
+        /* padding-bottom: 45%;
+        padding-top: 25px; */
         }
+
+            div.SoundVideo{
+                float: right;
+                width: 50%; 
+                height: 100%;
+                margin-right: 10%;
+            }
+            div.MusicVideo{
+                float: left;
+                width: 50%; 
+                height: 100%;
+                margin-left: 10%;
+            }
         .VideoWrapper iframe {
-            position: absolute;
+            position: relative;
             top: 0;
             left: 0;
             width: 100%;
@@ -113,8 +179,24 @@ h1 {
 
         }
 
+        @media (max-width:767px) {
+            .VideoWrapper{
+                width: 100%;
+                height: 100%;
+            }
+            .SoundVideo {
+                width: 100%;
+                height: 100%;
+                float: none;
+            }
+            .MusicVideo {
+                width: 100%;
+                height: 100%;
+                float: none;
+            }
+        }
 h3 {
-    color: #fad643; 
+    /* color: #fad643;  */
 }
 
 p {
@@ -128,6 +210,7 @@ footer{
     color: #000000;
     padding: 100px;
     text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     /* overflow: hidden */
 }
     ul.footer {
@@ -149,9 +232,8 @@ footer{
             border-radius: 50%;
 
         }
-    .FootText{
-        color: #ffffff;
-        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: large;
-        margin: 20px 0px;
-    }   
+        .FootText{
+            color: #ffffff;
+            font-size: large;
+            margin: 50px 0px 0px 0px;
+        }   
