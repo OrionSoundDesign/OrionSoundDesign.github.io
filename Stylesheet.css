@@ -31,6 +31,7 @@ a {
 header{
     background-color: rgba(17, 23, 38, 0.2); /*old HEXcolor code #111726, using RBGA so opacity isn't inhereted by children; */
     margin: 0;
+    padding: 10px;
     transition: 500ms;
 }
 
@@ -52,11 +53,11 @@ ul {
     list-style-type: none;
 }
     .HeaderUl{
-        opacity: 0;
+        opacity: 0.7;
         transition: 500ms;  
     }
     .HeaderUl:hover{
-        opacity: 100%;
+        opacity: 1;
         transition: 500ms;
         }
 
@@ -80,25 +81,27 @@ ul {
         }
 
 h1 {
- color: #ffffff; 
-    
+    color: #ffffff; 
+    margin: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
     section.PortfolioVideos {
-    background: #111726;
-    color: #fad643; 
-    padding: 50px;
-    width: auto;
-    height: 100%;
+        background: #111726;
+        color: #fad643; 
+        padding: 50px;
+        width: auto;
+        height: 100%;
 }
     .VideoWrapper {
         float: none;
         clear: both;
         width: 100%;
         position: relative;
-        padding-bottom: 56.25%;
+        padding-bottom: 45%;
         padding-top: 25px;
-        height: 0;
         }
         .VideoWrapper iframe {
             position: absolute;
