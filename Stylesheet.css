@@ -50,34 +50,31 @@ ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
-
 }
     .HeaderUl{
         opacity: 0;
-        transition: 500ms;
+        transition: 500ms;  
     }
     .HeaderUl:hover{
-    opacity: 100%;
-    transition: 500ms;
+        opacity: 100%;
+        transition: 500ms;
         }
 
-    .LinkClickable {
+.LinkClickable {
     display: inline-block;
     position: relative;
     padding: 2em;
     margin: -2em;
 }
     li.HeaderLinks {
-        background: #111726;
+        /* background: #111726; */ /*commenting out to make opacity easier*/
         display: inline-flex;
         justify-content: space-around;
         justify-content: space-between;
         margin: 0px 1px;
         padding: 20px 2%;
         overflow: hidden;
-
     }
-
         li.HeaderLinks:first-child {
             margin-left: 60%;
         }
