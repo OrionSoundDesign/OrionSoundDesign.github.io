@@ -172,95 +172,58 @@ div.ImgText{
 section.DemoreelVideos {
         background: #111726;
         padding: 50px;
-        padding-bottom: 555px;
+        padding-bottom: 680px;
         top:0;
         bottom:0;
         clear: both;
         /* width: 100%;
         height: 100%; */
 }
-
+        
+/* I dont know how else to solve other than making duplicates */
     /* * {box-sizing:border-box} */
     /* Slideshow container */
-    .slideshow-container {
+    .slideshow-container, .slideshow-container2  {
         /* max-width: 1000px; */
         position: relative;
         margin: auto;
     }
     
-        /* I dont know how else to solve other than making duplicates */
-    
-        .slideshow-container2 {
-            /* max-width: 1000px; */
-            position: relative;
-            margin: auto;
-        }
-    
     /* Hide the images by default */
-    .mySlides {
+    .mySlides, .mySlides2 {
         display: none;
     }
-    
-        .mySlides2 {
-            display: none;
-        }
-    
+
     /* Next & previous buttons */
-    .prev, .next {
+    .prev, .prev2, .next, .next2 {
         cursor: pointer;
         position: absolute;
         top: 50%;
         width: auto;
         margin-top: -22px;
-        padding: 16px;
+        padding: 25px;
         color: white;
         font-weight: bold;
         font-size: 18px;
         transition: 0.6s ease;
         border-radius: 0 3px 3px 0;
         user-select: none;
-    text-align: unset;
-    }
-    
-        .prev2, .next2 {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            margin-top: -22px;
-            padding: 16px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
         text-align: unset;
-        }
+    }
     
     /* Position the "next button" to the right */
-    .next {
+    .next, .next2 {
         right: 0;
         border-radius: 3px 0 0 3px;
     }
     
-    .prev{
+    .prev, .prev2 {
         left: 0;
-        border-radius: 3px 0 0 3px;
+        border-radius: 0px 3px 3px 0px;
         }
-    
-        .next2 {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-        }
-    
-        .prev2{
-            left: 0;
-            border-radius: 3px 0 0 3px;
-        }
-    
+
     /* On hover, add a black background color with a little bit see-through */
-    .prev:hover, .next:hover {
+    .prev:hover, .prev2:hover, .next:hover, .next2:hover {
         background-color: rgba(0,0,0,0.8);
     }
     
@@ -285,34 +248,43 @@ section.DemoreelVideos {
     }
     
     /* The dots/bullets/indicators */
-    .dot {
+    .dot, .dot2 {
+        box-shadow: inset 0px 0px 100px 0px rgba(0, 0, 0, 0.75);
+        background-image: url(images/Reaper.png);
+        background-position: center;
+        background-size:cover;
+        background-repeat: no-repeat;
+        object-fit: contain;
         cursor: pointer;
-        height: 15px;
-        width: 15px;
+        height: 100px;
+        width: 25%;
+        padding: 50px;
         margin: 0 2px;
-        background-color: #bbb;
-        border-radius: 50%;
+        padding: 10px;
+        background-color: rgb(0, 0, 0);
+        border-radius: 0%;
         display: inline-flex;
-        transition: background-color 0.6s ease;
+        transition: 500ms;
     } 
-    
-        .dot2 {
-            cursor: pointer;
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-flex;
-            transition: background-color 0.6s ease;
-        }
-    
-    .active, .dot:hover {
-        background-color: #717171;
+
+    .active, .active2 {
+        background-color: #ffffff;
+        box-shadow: 0px 0px 20px 0px #000000;
+        transition: 1s;
     }
-        .active2, .dot2:hover {
-            background-color: #717171;
+        .active.dot:hover, .active2.dot2:hover{
+            box-shadow: inset 0px 0px 00px 0px #000000;
+            box-shadow: 0px 0px 10px 0px #000000;
+            transition: 1s;
         }
+
+        .dot:hover, .dot2:hover{
+            box-shadow: inset 0px 0px 10px 0px rgb(51, 51, 51);
+
+            transition: 500ms;
+        }
+
+
     
     /* Fading animation */
     .fade {
