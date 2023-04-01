@@ -23,6 +23,12 @@ body {
     text-align: center;
 }
 
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
 a {
     text-decoration: none;
     transition: 500ms;
@@ -45,6 +51,8 @@ a {
         text-decoration: none;
     }
 
+
+    
 header{
     font-family:  Arial, Helvetica, sans-serif;
     background-color: rgba(17, 23, 38, 0.0); /*old HEXcolor code #111726, using RBGA so opacity isn't inhereted by children; */
@@ -66,12 +74,6 @@ header{
         z-index: 6;
     }
 
-    ul {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-
-    }
         .HeaderUl{
             text-align: right;
             list-style-position: inside;
@@ -89,6 +91,7 @@ header{
             padding: 2em;
             margin: -2em;
         }
+        
         li.HeaderLinks {
             /* background: #111726; */ /*commenting out to make opacity easier*/
             display: inline-flex;
@@ -103,8 +106,6 @@ header{
             } */
 
 
-
-
 /* #ee5454 redish color I want to save for later*/
 
 section.ImgShowcase {
@@ -113,7 +114,8 @@ section.ImgShowcase {
     padding: 100px;
     margin: -50px auto; 
     bottom: 50px;
-    box-shadow: 0px 00px 20px 0px #000000;
+    box-shadow: 0px 00px 10px 0px #000000;
+
 }
     section.ImgShowcase::before {
         content: "";
@@ -166,16 +168,37 @@ div.ImgText{
     letter-spacing: 10px;
     font-size: 50px;
     text-align: center;
+    box-shadow: 0px 00px 10px 0px #000000;
+    clip-path: inset(0px -10px -10px -10px);
+}
+
+div.VideoTitle {
+    display: table;
+    width: 100%;
+    table-layout: fixed;    /* For cells of equal size */
+    white-space: nowrap;
+    font-size: 25px;
 
 }
+    div.VideoTitle span.VideoTitle {
+        display: table-cell;
+        text-align: center;
+    }
+    span.VideoTitle{
+        background-color: #111726;
+        padding: 20px 0;
+
+    }
 
 section.DemoreelVideos {
         background: #111726;
-        padding: 50px;
+        padding: 0px 50px;
         padding-bottom: 680px;
         top:0;
         bottom:0;
         clear: both;
+        box-shadow: 0px 00px 10px 0px #000000;
+        clip-path: inset(0px -10px -10px -10px);
         /* width: 100%;
         height: 100%; */
 }
@@ -187,11 +210,20 @@ section.DemoreelVideos {
         /* max-width: 1000px; */
         position: relative;
         margin: auto;
+        border: 1px solid rgba(0, 0, 0, 0);
+        transition: 500ms;
+        
     }
     
+        .slideshow-container:hover, .slideshow-container2:hover{
+            border: 1px solid #ffffff;
+            transition: 2s;
+        }
+
     /* Hide the images by default */
     .mySlides, .mySlides2 {
         display: none;
+
     }
 
     /* Next & previous buttons */
@@ -209,6 +241,7 @@ section.DemoreelVideos {
         border-radius: 0 3px 3px 0;
         user-select: none;
         text-align: unset;
+
     }
     
     /* Position the "next button" to the right */
@@ -271,21 +304,21 @@ section.DemoreelVideos {
         background-color: #ffffff;
         box-shadow: 0px 0px 20px 0px #000000;
         transition: 1s;
+        padding: 10px 2%;
     }
         .active.dot:hover, .active2.dot2:hover{
             box-shadow: inset 0px 0px 00px 0px #000000;
             box-shadow: 0px 0px 10px 0px #000000;
             transition: 1s;
-        }
+            padding: 10px 2%;
 
+        }
         .dot:hover, .dot2:hover{
             box-shadow: inset 0px 0px 10px 0px rgb(51, 51, 51);
-
+            padding: 10px 2%;
             transition: 500ms;
         }
 
-
-    
     /* Fading animation */
     .fade {
         animation-name: fade;
@@ -347,15 +380,28 @@ section.DemoreelVideos {
             float: none;
         }
     }
-h3 {
-    /* color: #fad643;  */
+
+/* ul.VideoTitle {
+    display: flex;
+    position: relative;
+    margin: 0 17.5%;
+
 }
+
+    li.VideoTitle {
+        background-color: #ff0000;
+        margin-right: 47.5%;
+        padding: 25px 5%;
+        white-space:nowrap;
+
+    } */
 
 p {
     font-size: 72px;
     margin: 100;
     padding: 100;
     }
+
 footer{
     display: block;
     background: #111726;
