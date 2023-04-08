@@ -430,7 +430,7 @@ section.DemoreelVideos {
         ul.WhatIDoUl {
             list-style-position: inside;
             list-style-type: disc;
-            list-style-position: ;
+            /* list-style-position: ; */
         }
     /* p {
         width: 50%;
