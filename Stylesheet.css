@@ -31,7 +31,7 @@ body {
 
 a {
     text-decoration: none;
-    transition: 500ms;
+    transition: 250ms;
 }
     a:link {
         color: #ffffff;
@@ -53,7 +53,7 @@ a {
 
 
     
-header{
+header {
     font-family:  Arial, Helvetica, sans-serif;
     background-color: rgba(17, 23, 38, 0.0); /*old HEXcolor code #111726, using RBGA so opacity isn't inhereted by children; */
     margin: 0px;
@@ -62,7 +62,7 @@ header{
     font-size: medium;
 }
 
-    header:hover{
+    header:hover {
         /* border-bottom: #000000 10px solid; */
         background-color: rgba(17, 23, 38, 1);
         transition: 500ms;
@@ -74,13 +74,13 @@ header{
         z-index: 6;
     }
 
-        .HeaderUl{
+        .HeaderUl {
             text-align: right;
             list-style-position: inside;
             opacity: 0.7;
             transition: 500ms;  
         }
-            .HeaderUl:hover{
+            .HeaderUl:hover {
                 opacity: 1;
                 transition: 500ms;
                 }
@@ -142,37 +142,36 @@ section.ImgShowcase {
             text-overflow: ellipsis;
             text-shadow:0px 0px 10px #272727;
         }
-            h1.ImgText{
+            h1.ImgText {
                 font-family: NugoSans, Arial, Helvetica, sans-serif;
                 font-weight: bolder;
                 font-size: 72px;
                 letter-spacing: 0.8cm;
                 text-transform: uppercase;
-                left: 25px;
+                left: 1%;
             }
-                .ImgSubText{
+                .ImgSubText {
 
             }
-            h2.ImgText{
+            h2.ImgText {
                 font-weight: 10;
             }
             
-            h3.ImgText{
+            h3.ImgText {
                 font-size: x-large;
                 font-weight: 10;
             }
 
 
-div.ImgText{
+div.ImgText {
     padding: 25px;
     letter-spacing: 10px;
-    font-size: 50px;
+    font-size: 30px;
     text-align: center;
     box-shadow: 0px 00px 10px 0px #000000;
     clip-path: inset(0px -10px -10px -10px);
+    text-transform: uppercase;
 }
-
-/* bees bees bees */
 
 div.VideoTitle {
     display: table;
@@ -186,7 +185,7 @@ div.VideoTitle {
         display: table-cell;
         text-align: center;
     }
-    span.VideoTitle{
+    span.VideoTitle {
         background-color: #111726;
         padding: 20px 0;
 
@@ -308,14 +307,14 @@ section.DemoreelVideos {
         transition: 1s;
         padding: 10px 2%;
     }
-        .active.dot:hover, .active2.dot2:hover{
+        .active.dot:hover, .active2.dot2:hover {
             box-shadow: inset 0px 0px 00px 0px #000000;
             box-shadow: 0px 0px 10px 0px #000000;
             transition: 1s;
             padding: 10px 2%;
 
         }
-        .dot:hover, .dot2:hover{
+        .dot:hover, .dot2:hover {
             box-shadow: inset 0px 0px 10px 0px rgb(51, 51, 51);
             padding: 10px 2%;
             transition: 500ms;
@@ -353,13 +352,13 @@ section.DemoreelVideos {
             z-index: auto;
             box-shadow: 0px 00px 20px 0px #000000;;
         }
-            .SoundVideo{
+            .SoundVideo {
                 float: left;
                 width: 45%; 
                 height: 100%;
                 /* margin-right: 10%; */
             }
-            .MusicVideo{
+            .MusicVideo {
                 float: right;
                 width: 45%; 
                 height: 100%;
@@ -398,11 +397,62 @@ section.DemoreelVideos {
 
     } */
 
-p {
-    font-size: 72px;
-    margin: 100;
-    padding: 100;
+.WhatIDoTable {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    height: 1500px;
+    overflow: hidden;
+    border-collapse: collapse;
+}
+    /* tr{
+        width: 50%;
+    } */
+
+    td {
+        display: table-cell;
+        font-size: xx-large;
+        margin: 0px;
+        padding: 5%;
+        height: 500px;
+        word-wrap: break-word;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 0px;
     }
+
+        h4 {
+            margin: 0;
+            text-transform: uppercase;
+
+        }
+
+        ul.WhatIDoUl {
+            list-style-position: inside;
+            list-style-type: disc;
+            list-style-position: ;
+        }
+    /* p {
+        width: 50%;
+    } */
+
+.WhatIDoImg {
+    /* display: block;
+    width: 50px;
+    height: 50px; */
+    object-fit: cover;
+    border: 10px solid #000000;
+}
+    .Img1 {
+        background-image: url(Images/Reaper.png);
+    }
+    .Img2 {
+        background-image: url(Images/Reaper.png)
+    }
+    .Img3 {
+        background-image: url(Images/Reaper.png)
+    }
+
 
 footer{
     display: block;
